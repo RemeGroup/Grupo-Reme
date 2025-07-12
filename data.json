@@ -1,0 +1,24 @@
+{
+  "itinerario": [
+    { "fecha": "2025-07-15", "descripcion": "Reunión de planificación mensual" },
+    { "fecha": "2025-07-20", "descripcion": "Entrega de proyecto a cliente A" },
+    { "fecha": "2025-07-28", "descripcion": "Revisión trimestral de resultados" }
+  ],
+  "eventos": [
+    {
+      "titulo": "Feria Empresarial",
+      "fecha": "2025-07-10",
+      "descripcion": "Participación en la feria local de negocios con stand informativo."
+    },
+    {
+      "titulo": "Capacitación Interna",
+      "fecha": "2025-07-25",
+      "descripcion": "Curso sobre herramientas de productividad para el equipo."
+    },
+    {
+      "titulo": "Lanzamiento de Nuevo Producto",
+      "fecha": "2025-08-05",
+      "descripcion": "Evento para presentar oficialmente nuestro nuevo producto al mercado."
+    }
+  ]
+}
