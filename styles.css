@@ -1,0 +1,36 @@
+/* estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+#navbar {
+  display: flex;
+}
+#menu-toggle {
+  display: none;
+}
+main {
+  padding: 1rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+}
