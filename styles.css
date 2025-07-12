@@ -6,7 +6,8 @@
   --font: 'Poppins', sans-serif;
   --text-light: #fff;
   --text-dark: #333;
-  --card-bg: #ffffff;
+  --bg-light: #f4f4f7;
+  --card-bg: #fff;
 }
 * {
   margin: 0;
@@ -16,7 +17,7 @@
 body {
   font-family: var(--font);
   color: var(--text-dark);
-  background: #f4f4f7;
+  background: var(--bg-light);
   line-height: 1.6;
 }
 header {
@@ -25,6 +26,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .logo {
   font-size: 1.75rem;
@@ -36,21 +40,14 @@ header {
 nav ul {
   display: flex;
   gap: 1rem;
+  list-style: none;
 }
-nav a.button {
-  font-weight: 600;
+nav a {
   color: var(--text-light);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--text-light);
-  border-radius: 50px;
-  transition: background 0.3s, color 0.3s;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-}
-nav a.button:hover {
-  background: var(--text-light);
-  color: var(--gradient-end);
+  font-size: 0.875rem;
 }
 #menu-toggle {
   display: none;
@@ -60,70 +57,121 @@ nav a.button:hover {
   color: var(--text-light);
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
   color: var(--text-light);
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
 }
-.hero h1 {
+.hero-content h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   margin-bottom: 1rem;
 }
-.hero p {
+.hero-content p {
   font-size: 1.125rem;
-  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  background: var(--text-light);
+  color: var(--gradient-end);
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+}
+.cta-button:hover {
+  background: var(--gradient-end);
+  color: var(--text-light);
 }
 
-/* Grid cards */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
 }
-.card {
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--gradient-start);
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.card h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--gradient-end);
+}
+
+/* Mission Section */
+.mission {
+  background: var(--text-light);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.mission h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--gradient-start);
+}
+.mission p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--gradient-start);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.gallery-item p {
+  margin-top: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 1.75rem;
   margin-bottom: 1rem;
   color: var(--gradient-start);
 }
 
-/* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 0.75rem 1rem;
-  text-align: left;
-}
-thead {
-  background: #f9f9f9;
-}
-th {
-  font-weight: 600;
-}
-
 /* Footer */
 footer {
+  background: var(--card-bg);
   text-align: center;
-  padding: 1.5rem;
-  background: #fff;
+  padding: 2rem 1rem;
   font-size: 0.875rem;
   color: #777;
 }

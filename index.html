@@ -13,50 +13,64 @@
     <button id="menu-toggle" aria-label="Menú">☰</button>
     <nav>
       <ul id="navbar">
-        <li><a href="#itinerario" class="button">Itinerario</a></li>
-        <li><a href="#contactos" class="button">Contactos</a></li>
-        <li><a href="#eventos" class="button">Eventos</a></li>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#mision">Misión</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Bienvenida a Grupo Reme</h1>
-    <p>Organiza tus eventos con estilo y profesionalismo.</p>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>ÚNETE A NOSOTRAS</h1>
+      <p>Forma parte de una familia que te capacita con talleres para ser líder y emprendedora.</p>
+      <a href="#beneficios" class="cta-button">ÚNETE A NOSOTRAS</a>
+    </div>
   </section>
 
-  <main>
-    <div class="cards-container">
-      <section class="card" id="itinerario" contenteditable="true">
-        <h2>Itinerario</h2>
-        <ul>
-          <li>Evento 1 - Fecha y hora</li>
-          <li>Evento 2 - Fecha y hora</li>
-          <li>Evento 3 - Fecha y hora</li>
-        </ul>
-      </section>
-
-      <section class="card" id="contactos" contenteditable="true">
-        <h2>Contactos</h2>
-        <table>
-          <thead>
-            <tr><th>Nombre</th><th>Teléfono</th><th>Email</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Nombre</td><td>Teléfono</td><td>Email</td></tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="card" id="eventos" contenteditable="true">
-        <h2>Eventos</h2>
-        <ul>
-          <li>Evento A - Descripción breve</li>
-          <li>Evento B - Descripción breve</li>
-        </ul>
-      </section>
+  <section id="beneficios" class="features">
+    <h2>Beneficios</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Familia y Apoyo</h3>
+        <p>Al estar con Reme entras a una familia que te acompaña en cada paso.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Capacitación Continua</h3>
+        <p>Talleres exclusivos para desarrollar tu liderazgo y espíritu emprendedor.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Gestión del RNC</h3>
+        <p>Aprende a utilizar de forma correcta el RNC y otros trámites esenciales.</p>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section id="mision" class="mission">
+    <h2>Misión</h2>
+    <p><!-- Aquí irá la misión --></p>
+    <h2>Visión</h2>
+    <p><!-- Aquí irá la visión --></p>
+    <h2>Valores</h2>
+    <p><!-- Aquí irán los valores --></p>
+  </section>
+
+  <section id="eventos" class="gallery">
+    <h2>Eventos y Actividades</h2>
+    <div class="gallery-grid">
+      <!-- Agrega tus imágenes aquí -->
+      <div class="gallery-item"><img src="evento1.jpg" alt="Evento 1"><p>Descripción Evento 1</p></div>
+      <div class="gallery-item"><img src="evento2.jpg" alt="Evento 2"><p>Descripción Evento 2</p></div>
+      <div class="gallery-item"><img src="evento3.jpg" alt="Evento 3"><p>Descripción Evento 3</p></div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>Email: info@gruporeme.com | Teléfono: +1 809-000-0000</p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Grupo Reme. Todos los derechos reservados.</p>
