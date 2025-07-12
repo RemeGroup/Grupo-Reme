@@ -6,6 +6,7 @@
   --font: 'Poppins', sans-serif;
   --text-light: #fff;
   --text-dark: #333;
+  --card-bg: #ffffff;
 }
 * {
   margin: 0;
@@ -15,6 +16,7 @@
 body {
   font-family: var(--font);
   color: var(--text-dark);
+  background: #f4f4f7;
   line-height: 1.6;
 }
 header {
@@ -77,29 +79,51 @@ nav a.button:hover {
   font-weight: 400;
 }
 
-/* Main content */
-main {
-  max-width: 800px;
+/* Grid cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-section {
-  margin-bottom: 2rem;
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-section h2 {
-  font-size: 1.75rem;
+.card h2 {
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: var(--gradient-start);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+thead {
+  background: #f9f9f9;
+}
+th {
+  font-weight: 600;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: #f9f9f9;
+  background: #fff;
   font-size: 0.875rem;
   color: #777;
 }
