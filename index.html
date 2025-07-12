@@ -2,78 +2,54 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Itinerario Empresarial</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grupo Reme</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Header -->
-  <header class="bg-white shadow-md p-6 flex justify-between items-center">
-    <div class="text-xl font-bold">Mi Empresa</div>
-    <!-- Logo vendrá aquí -->
+<body>
+  <header>
+    <div class="logo">Grupo Reme</div>
+    <button id="menu-toggle" aria-label="Menú">☰</button>
+    <nav>
+      <ul id="navbar">
+        <li><a href="#itinerario">Itinerario</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Main Content -->
-  <main class="p-6 max-w-5xl mx-auto space-y-12">
-    <!-- Itinerario -->
-    <section id="itinerario">
-      <h2 class="text-2xl font-semibold mb-4">Itinerario</h2>
-      <ul id="lista-itinerario" class="space-y-2">
-        <!-- Aquí se cargará el itinerario desde un archivo JSON -->
+  <main>
+    <section id="itinerario" contenteditable="true">
+      <h2>Itinerario</h2>
+      <ul>
+        <li>Evento 1 - Fecha y hora</li>
+        <li>Evento 2 - Fecha y hora</li>
+        <li>Evento 3 - Fecha y hora</li>
       </ul>
     </section>
 
-    <!-- Eventos -->
-    <section id="eventos">
-      <h2 class="text-2xl font-semibold mb-4">Eventos</h2>
-      <div id="lista-eventos" class="grid md:grid-cols-2 gap-4">
-        <!-- Eventos cargados dinámicamente -->
-      </div>
+    <section id="contactos" contenteditable="true">
+      <h2>Contactos</h2>
+      <ul>
+        <li>Nombre - Teléfono - Email</li>
+        <li>Nombre - Teléfono - Email</li>
+      </ul>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <p>Correo: <a href="mailto:info@miempresa.com" class="text-blue-500">info@miempresa.com</a></p>
-        <p>Teléfono: <span class="text-gray-700">+1 (809) 000-0000</span></p>
-        <p>Dirección: Calle Principal #123, Ciudad, País</p>
-      </div>
+    <section id="eventos" contenteditable="true">
+      <h2>Eventos</h2>
+      <ul>
+        <li>Evento A - Descripción breve</li>
+        <li>Evento B - Descripción breve</li>
+      </ul>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white text-center p-4 mt-12 text-sm text-gray-500">
-    © 2025 Mi Empresa. Todos los derechos reservados.
+  <footer>
+    <p>&copy; 2025 Grupo Reme. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script para cargar datos -->
-  <script>
-    fetch('data.json')
-      .then(res => res.json())
-      .then(data => {
-        const itinerario = document.getElementById('lista-itinerario');
-        data.itinerario.forEach(item => {
-          const li = document.createElement('li');
-          li.className = 'bg-white p-4 rounded shadow';
-          li.innerHTML = `<strong>${item.fecha}</strong> - ${item.descripcion}`;
-          itinerario.appendChild(li);
-        });
-
-        const eventos = document.getElementById('lista-eventos');
-        data.eventos.forEach(ev => {
-          const div = document.createElement('div');
-          div.className = 'bg-white p-4 rounded shadow';
-          div.innerHTML = `<h3 class='font-semibold'>${ev.titulo}</h3><p>${ev.fecha}</p><p>${ev.descripcion}</p>`;
-          eventos.appendChild(div);
-        });
-      });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
