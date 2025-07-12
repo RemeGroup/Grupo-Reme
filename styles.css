@@ -1,13 +1,11 @@
-/* Fuentes y variables */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+/* Paleta elegante sin morado */
 :root {
-  --gradient-start: #8a2be2;
-  --gradient-end: #ff69b4;
+  --bg-light: #F9F9F9;
+  --text-dark: #333333;
+  --text-secondary: #555555;
+  --accent-gold: #D4AF37;
+  --card-bg: #FFFFFF;
   --font: 'Poppins', sans-serif;
-  --text-light: #fff;
-  --text-dark: #333;
-  --bg-light: #f4f4f7;
-  --card-bg: #fff;
 }
 * {
   margin: 0;
@@ -16,24 +14,25 @@
 }
 body {
   font-family: var(--font);
-  color: var(--text-dark);
   background: var(--bg-light);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 header {
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background: var(--card-bg);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 100;
 }
 .logo {
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--text-light);
+  color: var(--text-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -43,61 +42,66 @@ nav ul {
   list-style: none;
 }
 nav a {
-  color: var(--text-light);
+  color: var(--text-dark);
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.875rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--accent-gold);
 }
 #menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
-  color: var(--text-light);
-  text-align: center;
+  background: var(--card-bg);
   padding: 6rem 2rem;
+  text-align: center;
 }
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 .hero-content p {
   font-size: 1.125rem;
   margin-bottom: 2rem;
+  color: var(--text-secondary);
 }
 .cta-button {
-  background: var(--text-light);
-  color: var(--gradient-end);
+  background: var(--accent-gold);
+  color: var(--card-bg);
   padding: 0.75rem 2rem;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s;
 }
 .cta-button:hover {
-  background: var(--gradient-end);
-  color: var(--text-light);
+  background: #b7942d;
 }
 
-/* Features Section */
+/* Features */
 .features {
+  background: var(--bg-light);
   padding: 4rem 2rem;
   text-align: center;
 }
 .features h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--gradient-start);
+  color: var(--accent-gold);
 }
 .features-grid {
   display: grid;
@@ -108,39 +112,44 @@ nav a {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 .feature-card h3 {
   font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: var(--gradient-end);
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+.feature-card p {
+  color: var(--text-secondary);
 }
 
-/* Mission Section */
+/* Mission */
 .mission {
-  background: var(--text-light);
+  background: var(--card-bg);
   padding: 4rem 2rem;
   text-align: center;
 }
 .mission h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: var(--gradient-start);
+  color: var(--accent-gold);
 }
 .mission p {
   max-width: 600px;
   margin: 0 auto 2rem;
+  color: var(--text-secondary);
 }
 
-/* Gallery Section */
+/* Gallery */
 .gallery {
+  background: var(--bg-light);
   padding: 4rem 2rem;
   text-align: center;
 }
 .gallery h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--gradient-start);
+  color: var(--accent-gold);
 }
 .gallery-grid {
   display: grid;
@@ -154,17 +163,22 @@ nav a {
 }
 .gallery-item p {
   margin-top: 0.5rem;
+  color: var(--text-secondary);
 }
 
-/* Contact Section */
+/* Contact */
 .contact {
+  background: var(--card-bg);
   padding: 3rem 2rem;
   text-align: center;
 }
 .contact h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: var(--gradient-start);
+  color: var(--accent-gold);
+}
+.contact p {
+  color: var(--text-secondary);
 }
 
 /* Footer */
@@ -173,7 +187,7 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.875rem;
-  color: #777;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
@@ -182,7 +196,7 @@ footer {
   }
   nav ul {
     flex-direction: column;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: var(--card-bg);
     position: absolute;
     top: 100%;
     left: 0;
