@@ -1,35 +1,33 @@
 :root {
-  --bg-dark: #121212;
-  --text-light: #E0E0E0;
-  --accent: #00E5FF;
-  --accent-hover: #33E6FF;
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Poppins', sans-serif;
+  --primary: #FFB400;
+  --dark: #1E1E2F;
+  --light: #FAFAFA;
+  --font-main: 'Poppins', sans-serif;
+  --font-accent: 'Montserrat', sans-serif;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-body { background: var(--bg-dark); color: var(--text-light); font-family: var(--font-body); }
-.container { max-width: 1200px; margin:0 auto; padding:0 2rem; }
-header { position:fixed; top:0; width:100%; background: rgba(18,18,18,0.9); backdrop-filter: blur(10px); padding:1rem 0; z-index:100; }
-.header-container { display:flex; justify-content:space-between; align-items:center; }
-.logo { font-family: var(--font-heading); font-size:2rem; color: var(--accent); letter-spacing:2px; }
-#menu-toggle { display:none; background:none; border:none; color: var(--text-light); font-size:1.5rem; cursor:pointer; }
-.menu { list-style:none; display:flex; gap:1.5rem; }
-.menu a { color: var(--text-light); text-decoration:none; font-weight:600; transition: color 0.3s; }
-.menu a:hover { color: var(--accent); }
-main { padding-top:6rem; }
-/* Hero */
-.hero { height:80vh; position:relative; display:flex; align-items:center; }
-.hero .overlay { position:absolute; inset:0; background: rgba(0,0,0,0.5); }
-.hero-content { position:relative; z-index:10; text-align:center; color: var(--text-light); font-family: var(--font-heading); }
-.hero-content .tagline { font-size:1rem; margin-bottom:1rem; font-weight:400; }
-.hero-content h1 { font-size:3rem; margin-bottom:1.5rem; }
-.hero-content .highlight { color: var(--accent); }
-.cta-button { display:inline-block; padding:1rem 2rem; background: var(--accent); color: var(--bg-dark); font-size:1rem; font-weight:600; border-radius:50px; transition: background 0.3s; }
-.cta-button:hover { background: var(--accent-hover); }
-/* Footer */
-footer { padding:2rem 0; text-align:center; }
-@media(max-width:768px){
-  #menu-toggle { display:block; }
-  .menu { display:none; flex-direction:column; background: var(--bg-dark); padding:1rem; position: absolute; top:100%; left:0; right:0; }
-  .menu.show { display:flex; }
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-main);color:var(--dark);background:var(--light);}
+header{background:var(--dark);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;position:fixed;width:100%;z-index:100;}
+.logo{font-family:var(--font-accent);font-size:2rem;color:var(--primary);}
+.menu{list-style:none;display:flex;gap:1rem;}
+.menu a{color:#fff;text-decoration:none;font-weight:600;transition:color 0.3s;}
+.menu a:hover{color:var(--primary);}
+#menu-toggle{display:none;}
+main{padding-top:6rem;}
+.section, .section-alt{padding:4rem 2rem;}
+.section{background:var(--light);}
+.section-alt{background:#eee;}
+h2{font-family:var(--font-accent);font-size:2rem;margin-bottom:1rem;color:var(--dark);}
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.overview-grid img{width:100%;border-radius:8px;}
+form{display:grid;gap:1rem;max-width:400px;margin:0 auto;}
+form input{padding:0.75rem;border:1px solid #ccc;border-radius:4px;}
+form button{padding:0.75rem;background:var(--primary);color:var(--dark);border:none;border-radius:4px;font-weight:600;cursor:pointer;}
+.carousel{position:relative;max-width:600px;margin:0 auto;overflow:hidden;}
+.slides{display:flex;transition:transform 0.5s ease;}
+.slides img{min-width:100%;border-radius:8px;}
+.prev, .next{position:absolute;top:50%;transform:translateY(-50%);background:var(--primary);border:none;color:#fff;padding:0.5rem;cursor:pointer;border-radius:50%;}
+.prev{left:1rem;} .next{right:1rem;}
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s,transform 0.6s;}
+.fade-in.visible{opacity:1;transform:none;}
+@media(max-width:768px){.menu{display:none;flex-direction:column;background:var(--dark);position:absolute;top:4rem;left:0;right:0;padding:1rem;} .menu.show{display:flex;} #menu-toggle{display:block;background:none;border:none;color:#fff;font-size:1.5rem;}}
