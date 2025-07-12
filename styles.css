@@ -1,52 +1,83 @@
-/* Reset y variables */
+/* Fuentes y variables */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+:root {
+  --gradient-start: #8a2be2;
+  --gradient-end: #ff69b4;
+  --font: 'Poppins', sans-serif;
+  --text-light: #fff;
+  --text-dark: #333;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --primary: #4a90e2;
-  --font: 'Helvetica Neue', sans-serif;
-}
 body {
   font-family: var(--font);
+  color: var(--text-dark);
   line-height: 1.6;
-  color: #333;
 }
 header {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  padding: 1rem 2rem;
-  position: relative;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 nav ul {
   display: flex;
-  list-style: none;
   gap: 1rem;
 }
-nav a {
+nav a.button {
+  font-weight: 600;
+  color: var(--text-light);
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--text-light);
+  border-radius: 50px;
+  transition: background 0.3s, color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-nav a:hover {
-  color: var(--primary);
+nav a.button:hover {
+  background: var(--text-light);
+  color: var(--gradient-end);
 }
 #menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
+  color: var(--text-light);
 }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+  color: var(--text-light);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+/* Main content */
 main {
   max-width: 800px;
   margin: 2rem auto;
@@ -57,26 +88,35 @@ section {
 }
 section h2 {
   font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  color: var(--primary);
+  color: var(--gradient-start);
 }
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #f9f9f9;
+  font-size: 0.875rem;
+  color: #777;
 }
+
 @media (max-width: 768px) {
   #menu-toggle {
     display: block;
   }
   nav ul {
     flex-direction: column;
-    background: #fff;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     display: none;
+    padding: 1rem 0;
   }
   nav ul.active {
     display: flex;
