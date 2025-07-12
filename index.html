@@ -3,50 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GRUPO REME - Inicio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>GRUPO REME</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="logo">GRUPO REME</div>
-    <button id="menu-toggle">☰</button>
-    <nav>
-      <ul id="navbar" class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Qué Hacemos</a></li>
-        <li><a href="services.html">Servicios</a></li>
-        <li><a href="mission.html">Misión & Visión</a></li>
-        <li><a href="events.html">Eventos</a></li>
-        <li><a href="allies.html">Aliados</a></li>
-        <li><a href="join.html">Únete</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">GRUPO REME</div>
+      <button id="menu-toggle" aria-label="Menú">☰</button>
+      <nav>
+        <ul id="navbar" class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Qué Hacemos</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="mission.html">Misión & Visión</a></li>
+          <li><a href="events.html">Eventos</a></li>
+          <li><a href="allies.html">Aliados</a></li>
+          <li><a href="join.html">Únete</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
-
-    <section class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
       <div class="overlay"></div>
-      <div class="hero-content">
+      <div class="container hero-content">
         <p class="tagline">Conectamos ideas, impulsamos sueños</p>
         <h1>Bienvenida a <span class="highlight">GRUPO REME</span></h1>
         <a href="join.html" class="cta-button">ÚNETE A NOSOTRAS</a>
       </div>
     </section>
-    <section class="overview">
-      <h2>Qué Hacemos</h2>
-      <div class="overview-grid">
-        <div><img src="images/06284fd6-0c2e-4c9d-93b2-a1532148695a.jpg"><p>Capacitación técnica y emocional</p></div>
-        <div><img src="images/70765dd9-ebbd-4451-8225-3739fd60cd97.jpg"><p>Mentorías personalizadas</p></div>
-        <div><img src="images/793dc38a-db58-409a-8fb3-12b40e71558a.jpg"><p>Ferias y eventos</p></div>
-        <div><img src="images/b885cc37-a78c-4367-b056-fb7ed77b1bc7.jpg"><p>Acceso a microcréditos</p></div>
-      </div>
-    </section>
-
   </main>
   <footer>
-    <p>&copy; 2025 GRUPO REME. Todos los derechos reservados.</p>
+    <div class="container">
+      <p>&copy; 2025 GRUPO REME. Todos los derechos reservados.</p>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
