@@ -1,14 +1,12 @@
-/* Variables de color */
+/* Paleta elegante sin morado */
 :root {
-  --dark-bg: #443C26;
-  --gold: #D4AF37;
-  --white: #FFFFFF;
-  --text-light: #F9F9F9;
+  --bg-light: #F9F9F9;
   --text-dark: #333333;
+  --text-secondary: #555555;
+  --accent-gold: #D4AF37;
+  --card-bg: #FFFFFF;
   --font: 'Poppins', sans-serif;
 }
-
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,177 +14,197 @@
 }
 body {
   font-family: var(--font);
+  background: var(--bg-light);
   color: var(--text-dark);
+  line-height: 1.6;
 }
-
-/* Header */
 header {
-  position: absolute;
-  top: 0; left: 0; right: 0;
+  background: var(--card-bg);
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 100;
 }
 .logo {
-  color: var(--white);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.menu {
-  list-style: none;
+nav ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  list-style: none;
 }
-.menu a {
-  color: var(--white);
+nav a {
+  color: var(--text-dark);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--accent-gold);
+}
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
 }
 
 /* Hero */
 .hero {
-  position: relative;
-  background: url('hero.jpg') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--card-bg);
+  padding: 6rem 2rem;
   text-align: center;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-.hero-content {
-  position: relative;
-  color: var(--white);
-  max-width: 600px;
-  padding: 0 1rem;
-}
-.hero-content .tagline {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
 }
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+.hero-content p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
 }
 .cta-button {
-  background: var(--gold);
-  color: var(--dark-bg);
-  padding: 1rem 2rem;
-  text-decoration: none;
+  background: var(--accent-gold);
+  color: var(--card-bg);
+  padding: 0.75rem 2rem;
   font-weight: 600;
   border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #b7942d;
 }
 
-/* Valores */
-.valores {
-  background: var(--dark-bg);
-  color: var(--white);
+/* Features */
+.features {
+  background: var(--bg-light);
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 4rem 1rem;
 }
-.valores h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.valores p {
+.features h2 {
+  font-size: 2rem;
   margin-bottom: 2rem;
-  font-size: 1.125rem;
+  color: var(--accent-gold);
 }
-.cards {
-  display: flex;
-  justify-content: center;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
-.card {
-  background: var(--white);
-  color: var(--text-dark);
-  width: 300px;
+.feature-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
-.card img {
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+.feature-card p {
+  color: var(--text-secondary);
+}
+
+/* Mission */
+.mission {
+  background: var(--card-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.mission h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent-gold);
+}
+.mission p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--text-secondary);
+}
+
+/* Gallery */
+.gallery {
+  background: var(--bg-light);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-gold);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.gallery-item img {
   width: 100%;
-  height: 200px;
+  border-radius: 8px;
   object-fit: cover;
 }
-.card h3 {
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-.card p {
-  font-size: 1rem;
-  margin: 0 1rem 1rem;
-}
-.button-card {
-  display: inline-block;
-  margin: 0 1rem 1.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--gold);
-  color: var(--dark-bg);
-  text-decoration: none;
-  border-radius: 50px;
+.gallery-item p {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
 }
 
-/* Section alternadas */
-.section-alt {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background: var(--gold);
-}
-.section-alt img {
-  flex: 1 1 400px;
-  border-radius: 8px;
-  max-width: 100%;
-}
-.section-alt .text {
-  flex: 1 1 300px;
-  color: var(--dark-bg);
-}
-.section-alt:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-
-/* Contacto */
-.contacto {
+/* Contact */
+.contact {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 3rem 1rem;
+}
+.contact h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent-gold);
+}
+.contact p {
+  color: var(--text-secondary);
 }
 
 /* Footer */
 footer {
+  background: var(--card-bg);
   text-align: center;
   padding: 2rem 1rem;
-  background: var(--white);
-  color: var(--text-secondary, var(--text-dark));
+  font-size: 0.875rem;
+  color: var(--text-secondary);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
+  #menu-toggle {
+    display: block;
   }
-  .section-alt {
+  nav ul {
     flex-direction: column;
+    background: var(--card-bg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 1rem 0;
   }
-  header {
-    position: static;
-    background: var(--dark-bg);
-  }
-  .menu {
-    flex-direction: column;
-    background: var(--dark-bg);
-    padding: 1rem;
+  nav ul.active {
+    display: flex;
   }
 }
